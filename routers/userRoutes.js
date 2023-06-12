@@ -10,7 +10,7 @@ router.route('/verify').post(isAuthenticated ,verify )
 
 router.route('/login').post( login )
 
-router.route('/logout').get(isAuthenticated, logout )
+router.route('/logout').get( logout )
 
 
 router.route("/newtask").post(isAuthenticated,addTask)
