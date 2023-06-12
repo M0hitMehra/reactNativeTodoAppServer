@@ -83,8 +83,7 @@ export const login = catchAsyncError(async (req, res, next) => {
 });
 
 export const logout = catchAsyncError(async (req, res, next) => {
-  const user = await User.findById(req.user._id);
-  if (!user) return next(new ErrorHandler("User not found", 404));
+   
   const options = {
     httpOnly: true,
     expires: new Date(Date.now()),
